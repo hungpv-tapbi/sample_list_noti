@@ -9,3 +9,13 @@ val Pink80 = Color(0xFFEFB8C8)
 val Purple40 = Color(0xFF6650a4)
 val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
+val Black = Color(0xFF000000)
+val White = Color(0xFFFFFFFF)
+
+
+fun getNiceRandomColor(): Int {
+    val r = (100..255).random()
+    val g = (100..255).random()
+    val b = (100..255).random()
+    return android.graphics.Color.rgb(r, g, b)
+}
