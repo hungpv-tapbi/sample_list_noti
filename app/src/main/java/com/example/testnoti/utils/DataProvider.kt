@@ -9,6 +9,7 @@ object DataProvider {
             // Group 1 (3 notifications)
             NotificationItem.Group(
                 id = 1,
+                appName = "APP Test 1",
                 notifications = listOf(
                     NotificationItem.Notification(
                         id = 101,
@@ -42,6 +43,7 @@ object DataProvider {
             // Group 2 (2 notifications)
             NotificationItem.Group(
                 id = 2,
+                appName = "APP Test 2",
                 notifications = listOf(
                     NotificationItem.Notification(
                         id = 301,
