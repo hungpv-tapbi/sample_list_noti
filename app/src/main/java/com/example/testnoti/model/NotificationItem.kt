@@ -9,6 +9,11 @@ sealed class NotificationItem {
     ) : NotificationItem()
 
     data class Notification(
-        val id: Int, val groupId: Int, val color: Int, val content: String = ""
+        val id: Int,
+        val groupId: Int? = null,
+        val title: String = "",
+        val content: String = "",
+        val index: Int = -1,
+        val isVisible: Boolean = false
     ) : NotificationItem()
 }

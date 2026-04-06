@@ -4,7 +4,33 @@ import com.example.testnoti.model.NotificationItem
 
 object DataProvider {
     fun getSampleData(): List<NotificationItem> {
+        val list = List(
+            50
+        ) { index ->
+            NotificationItem.Notification(
+                id = 500 + index,
+                groupId = 1,
+                title = "Cỏ dại và hoa dành dành",
+                content = "noti ${500 + index}"
+            )
+        }
+
+        val moreNoti = List(1000) { index ->
+            NotificationItem.Notification(
+                id = 1000 + index,
+                groupId = -1,
+                title = "Cỏ dại và hoa dành dành",
+                content = "noti ${1000 + index}"
+            )
+        }
         val sampleList: List<NotificationItem> = listOf(
+            NotificationItem.Notification(
+                id = 202,
+                groupId = -1,
+                title = "You co len",
+                content = "noti 202"
+
+            ),
 
             // Group 1 (3 notifications)
             NotificationItem.Group(
@@ -14,29 +40,33 @@ object DataProvider {
                     NotificationItem.Notification(
                         id = 101,
                         groupId = 1,
-                        color = 0xFFE57373.toInt(),
+                        title = "Cỏ dại và hoa dành dành",
+
                         content = "noti 1"
                     ),
                     NotificationItem.Notification(
                         id = 102,
                         groupId = 1,
-                        color = 0xFF64B5F6.toInt(),
+                        title = "Cỏ dại và hoa dành dành",
+
                         content = "noti 2"
                     ),
                     NotificationItem.Notification(
                         id = 103,
                         groupId = 1,
-                        color = 0xFF81C784.toInt(),
+                        title = "Cỏ dại và hoa dành dành",
+
                         content = "noti 3"
                     )
-                )
+                ) + list
             ),
 
             // Notification lẻ
             NotificationItem.Notification(
                 id = 201,
                 groupId = -1,
-                color = 0xFFFFB74D.toInt(), content = "noti 4"
+                title = "You co len",
+                content = "noti 4"
 
             ),
 
@@ -48,67 +78,20 @@ object DataProvider {
                     NotificationItem.Notification(
                         id = 301,
                         groupId = 2,
-                        color = 0xFFBA68C8.toInt(),
+                        title = "Test notification",
+
                         content = "noti 5"
                     ),
                     NotificationItem.Notification(
                         id = 302,
                         groupId = 2,
-                        color = 0xFF4DB6AC.toInt(),
+                        title = "Test notification",
+
                         content = "noti 6"
                     )
                 )
             ),
-
-            // Notification lẻ
-            NotificationItem.Notification(
-                id = 202,
-                groupId = -1,
-                color = 0xFFA1887F.toInt(), content = "noti 7"
-            ),
-
-            NotificationItem.Notification(
-                id = 203,
-                groupId = -1,
-                color = 0xFFA1887F.toInt(), content = "noti 8"
-            ),
-
-            NotificationItem.Notification(
-                id = 204,
-                groupId = -1,
-                color = 0xFFA1887F.toInt(), content = "noti 9"
-            ),
-
-            NotificationItem.Notification(
-                id = 205,
-                groupId = -1,
-                color = 0xFFA1887F.toInt(), content = "noti 10"
-            ),
-
-            NotificationItem.Notification(
-                id = 206,
-                groupId = -1,
-                color = 0xFFA1887F.toInt(), content = "noti 11"
-            ),
-
-            NotificationItem.Notification(
-                id = 207,
-                groupId = -1,
-                color = 0xFFA1887F.toInt(), content = "noti 12"
-            ),
-
-            NotificationItem.Notification(
-                id = 208,
-                groupId = -1,
-                color = 0xFFA1887F.toInt(), content = "noti 13"
-            ),
-
-            NotificationItem.Notification(
-                id = 209,
-                groupId = -1,
-                color = 0xFFA1887F.toInt(), content = "noti 14"
-            )
-        )
+        ) + moreNoti
         return sampleList
     }
 

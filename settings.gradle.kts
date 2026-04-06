@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "TestNoti"
 include(":app")
 include(":AndroidLiquidGlass-1.0.6")
+include(":backdrop")
