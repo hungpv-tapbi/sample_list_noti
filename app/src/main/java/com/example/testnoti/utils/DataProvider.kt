@@ -5,13 +5,14 @@ import com.example.testnoti.model.NotificationItem
 object DataProvider {
     fun getSampleData(): List<NotificationItem> {
         val list = List(
-            50
+            12
         ) { index ->
             NotificationItem.Notification(
                 id = 500 + index,
                 groupId = 1,
                 title = "Cỏ dại và hoa dành dành",
-                content = "noti ${500 + index}"
+                content = "noti ${500 + index}",
+                isCanDelete = true
             )
         }
 
@@ -20,7 +21,9 @@ object DataProvider {
                 id = 1000 + index,
                 groupId = -1,
                 title = "Cỏ dại và hoa dành dành",
-                content = "noti ${1000 + index}"
+                content = "noti ${1000 + index}",
+                isCanDelete = true
+
             )
         }
         val sampleList: List<NotificationItem> = listOf(
@@ -28,8 +31,8 @@ object DataProvider {
                 id = 202,
                 groupId = -1,
                 title = "You co len",
-                content = "noti 202"
-
+                content = "noti 202",
+                isCanDelete = false
             ),
 
             // Group 1 (3 notifications)
@@ -42,21 +45,24 @@ object DataProvider {
                         groupId = 1,
                         title = "Cỏ dại và hoa dành dành",
 
-                        content = "noti 1"
+                        content = "noti 1",
+                        isCanDelete = true
                     ),
                     NotificationItem.Notification(
                         id = 102,
                         groupId = 1,
                         title = "Cỏ dại và hoa dành dành",
 
-                        content = "noti 2"
+                        content = "noti 2",
+                        isCanDelete = true
                     ),
                     NotificationItem.Notification(
                         id = 103,
                         groupId = 1,
                         title = "Cỏ dại và hoa dành dành",
 
-                        content = "noti 3"
+                        content = "noti 3",
+                        isCanDelete = true
                     )
                 ) + list
             ),
@@ -66,7 +72,8 @@ object DataProvider {
                 id = 201,
                 groupId = -1,
                 title = "You co len",
-                content = "noti 4"
+                content = "noti 4",
+                isCanDelete = false
 
             ),
 
@@ -80,14 +87,16 @@ object DataProvider {
                         groupId = 2,
                         title = "Test notification",
 
-                        content = "noti 5"
+                        content = "noti 5",
+                        isCanDelete = true
                     ),
                     NotificationItem.Notification(
                         id = 302,
                         groupId = 2,
                         title = "Test notification",
 
-                        content = "noti 6"
+                        content = "noti 6",
+                        isCanDelete = true
                     )
                 )
             ),

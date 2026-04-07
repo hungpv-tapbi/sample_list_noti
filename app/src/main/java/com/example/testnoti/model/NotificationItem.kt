@@ -14,6 +14,7 @@ sealed class NotificationItem {
         val title: String = "",
         val content: String = "",
         val index: Int = -1,
-        val isVisible: Boolean = false
+        val isVisible: Boolean = false,
+        val isCanDelete: Boolean
     ) : NotificationItem()
 }
